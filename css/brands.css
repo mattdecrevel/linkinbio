@@ -34,14 +34,16 @@
 .button,
 button {
   font-family: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  display: inline-block;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
   text-decoration: none;
   height: 48px;
   padding: 0 16px;
-  text-align: center;
-  vertical-align: middle;
-  font-size: 18px;
-  width: 300px;
+  font-size: 1.5rem;
+  width: 100%;
+  max-width: 300px;
   font-weight: 600;
   line-height: 48px;
   letter-spacing: 0.5px;
@@ -50,6 +52,7 @@ button {
   border-radius: 8px;
   cursor: pointer;
   box-sizing: border-box; }
+
 button:hover,
 .button:focus {
   color: #333;
@@ -68,7 +71,7 @@ button:hover,
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .icon {
-  padding: 0px 8px 3.5px 0px;
+  padding: 0px 0px 0px 12px;
   vertical-align: middle;
   width: 20px;
   height: 20px;

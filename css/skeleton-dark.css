@@ -29,7 +29,7 @@
   position: relative;
   width: 100%;
   max-width: 600px;
-  text-align: center;
+  /* text-align: center; */
   margin: 0 auto;
   padding: 0 20px;
   box-sizing: border-box; }
@@ -38,6 +38,10 @@
   width: 100%;
   float: center;
   box-sizing: border-box; }
+
+.column.max {
+  max-width: 300px; 
+  margin: auto; }
 
 /* For devices larger than 400px */
 @media (min-width: 400px) {
@@ -68,7 +72,7 @@ are based on 10px sizing. So basically 1.5rem = 15px :) */
 html {
   font-size: 62.5%; }
 body {
-  background-color: #292929;
+  background-color: #191919;
   font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
   line-height: 1.6;
   font-weight: 400;
@@ -113,6 +117,15 @@ h6 { font-size: 1.5rem; line-height: 1.6;  letter-spacing: 0; }
 
 p {
   margin-top: 0; }
+
+  .header {
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    letter-spacing: .2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    margin-top: 3rem;
+}
 
 
 /* Links
