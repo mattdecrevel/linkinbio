@@ -80,6 +80,7 @@ button:hover,
   font-size: 0.5rem;
   line-height: 1rem;
   opacity: 0.5;
+  margin-top: 2px;
 }
 
 /* Brand Icons
@@ -95,6 +96,16 @@ button:hover,
 /* Brand Styles
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
+/* Clubhouse */
+.button.button-clubhouse {
+  color: #333333;
+  background-color: #f2efe4;
+}
+.button.button-clubhouse:hover,
+.button.button-clubhouse:focus {
+  filter: brightness(90%);
+}
+
 /* Discord */
 .button.button-discord {
     color: #ffffff;
@@ -102,16 +113,6 @@ button:hover,
 }
 .button.button-discord:hover,
 .button.button-discord:focus {
-    filter: brightness(90%);
-}
-
-/* Clubhouse */
-.button.button-clubhouse {
-    color: #333333;
-    background-color: #f2efe4;
-}
-.button.button-facebook:hover,
-.button.button-facebook:focus {
     filter: brightness(90%);
 }
 
@@ -367,6 +368,16 @@ button:hover,
 .button.button-youtube:hover,
 .button.button-youtube:focus {
     filter: brightness(90%);
+}
+
+/* WhatsApp */
+.button.button-whatsapp {
+  color: #ffffff;
+  background-color: #25d366;
+}
+.button.button-whatsapp:hover,
+.button.button-whatsapp:focus {
+  filter: brightness(90%);
 }
 
 /* Wordpress */
