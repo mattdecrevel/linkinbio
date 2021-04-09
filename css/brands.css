@@ -320,6 +320,16 @@ button:hover,
     filter: brightness(90%);
 }
 
+/* TikTok */
+.button.button-tiktok {
+  color: #ffffff;
+  background-color: #000000;
+}
+.button.button-tiktok:hover,
+.button.button-tiktok:focus {
+  filter: brightness(90%);
+}
+
 /* Tumblr */
 .button.button-tumblr {
     color: #ffffff;
