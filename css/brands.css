@@ -43,7 +43,7 @@ button {
   padding: 0 16px;
   font-size: 1.5rem;
   width: 100%;
-  max-width: 300px;
+  /* max-width: 350px; */
   font-weight: 600;
   line-height: 48px;
   letter-spacing: 0.5px;
