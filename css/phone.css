@@ -1,0 +1,703 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+button {
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+svg {
+  pointer-events: none;
+}
+body {
+  --toned-white: #e6ebef;
+  --brand-c: #3250fa;
+  --light-brand-c: #b4bffd;
+  --brand-grey: #627d8b;
+  --layer-zero-opacity: 1;
+  --layer-one-opacity: 0;
+  --layer-two-opacity: 0;
+  display: flex;
+  height: 100vh;
+  background: #000;
+  font-family: sans-serif;
+}
+body #phone {
+  display: flex;
+  width: 270px;
+  height: 546px;
+  margin: auto;
+  position: relative;
+  transform: scale(1.1);
+  overflow: hidden;
+}
+body #phone::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  inset: 0;
+  background-image: url("https://res.cloudinary.com/dugd5fjqo/image/upload/v1607102532/iphone-frame_c4jo6n.png");
+  background-size: 101%;
+  background-position: 50% 75%;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  z-index: 2;
+}
+body #phone #screen {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 12.5% 77.5%;
+  grid-template-areas: 'header';
+  width: 90%;
+  height: 94%;
+  margin: auto;
+  position: relative;
+  background: var(--toned-white);
+  border-radius: 30px;
+  overflow: hidden;
+}
+body #phone #screen #first-layer {
+  width: 98%;
+  min-height: 100%;
+  position: absolute;
+  left: 1%;
+  pointer-events: none;
+  opacity: var(--layer-one-opacity);
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  overflow: -moz-scrollbars-none;
+}
+body #phone #screen #first-layer::-webkit-scrollbar {
+  width: 0 !important;
+  display: none;
+}
+body #phone #screen #first-layer .big-poster {
+  width: 100%;
+  height: 67.5%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+body #phone #screen #first-layer .close-card {
+  width: 25px;
+  height: 25px;
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  border-radius: 50%;
+  z-index: 1;
+}
+body #phone #screen #first-layer .close-card svg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  inset: 0;
+  opacity: 0;
+}
+body #phone #screen #first-layer .big-movie-info {
+  width: 100%;
+  height: 57px;
+  position: absolute;
+  top: calc(67.5% + 14px);
+  left: 5%;
+}
+body #phone #screen #first-layer .big-movie-info .imdb {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50px;
+  height: 17px;
+  margin-top: 4px;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 11px;
+  color: var(--brand-grey);
+}
+body #phone #screen #first-layer .big-movie-info .imdb .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 62.5%;
+  height: 100%;
+  border: 1px solid var(--brand-grey);
+  border-radius: 3px;
+}
+body #phone #screen #first-layer .big-movie-info .imdb .grade {
+  font-size: 12px;
+}
+body #phone #screen #first-layer .movie-title {
+  width: 82.5%;
+  margin-top: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+body #phone #screen #first-layer .tags {
+  margin-top: 7px;
+  font-size: 10px;
+  color: var(--brand-grey);
+}
+body #phone #screen #first-layer .info-last {
+  width: 100%;
+  margin-top: 7px;
+  position: absolute;
+  color: var(--brand-grey);
+  font-size: 10px;
+  opacity: 0;
+}
+body #phone #screen #bottom-screen {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 90%;
+  left: 0;
+}
+body #phone #screen #mid-nav {
+  display: flex;
+  width: 90%;
+  height: 35px;
+  position: relative;
+  background: #fff;
+  border-radius: 7px;
+}
+body #phone #screen #mid-nav a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  margin: auto;
+  text-decoration: none;
+  color: #000;
+  font-size: 11px;
+  font-weight: 700;
+}
+body #phone #screen #mid-nav #nav-layer {
+  width: 47.5%;
+  height: 95%;
+  position: absolute;
+  top: 2.5%;
+  left: 1.25%;
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  pointer-events: none;
+}
+body #phone #screen #mid-nav svg {
+  width: 101%;
+  height: 102%;
+  position: absolute;
+  top: -1%;
+  left: -0.5%;
+}
+body #phone #screen #dual-wrapper {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+body #phone #screen #dual-wrapper .dual-screen {
+  display: grid;
+  width: 100%;
+  height: auto;
+  padding-bottom: 75px;
+  position: absolute;
+}
+body #phone #screen #dual-wrapper .dual-screen h4 {
+  margin-left: 5%;
+  font-size: 13px;
+  font-weight: 800;
+}
+body #phone #screen #dual-wrapper .dual-screen .reel {
+  display: flex;
+  width: 100%;
+  min-height: 47.5px;
+  margin-top: 15px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  overflow: -moz-scrollbars-none;
+}
+body #phone #screen #dual-wrapper .dual-screen .reel::-webkit-scrollbar {
+  width: 0 !important;
+  display: none;
+}
+body #phone #screen #dual-wrapper .dual-screen.left {
+  display: grid;
+  left: 0;
+  grid-template-columns: 100%;
+  grid-auto-rows: -webkit-min-content;
+  grid-auto-rows: min-content;
+  grid-gap: 25px;
+}
+body #phone #screen #dual-wrapper .dual-screen.left #movie-copy {
+  margin-top: 30px;
+}
+body #phone #screen #dual-wrapper .dual-screen.left #movie-copy p {
+  width: 90%;
+  margin-top: 15px;
+  margin-left: 5%;
+  color: rgba(0,0,0,0.85);
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 135%;
+}
+body #phone #screen #dual-wrapper .dual-screen.left .reel .item {
+  display: flex;
+  min-width: 55%;
+  height: 100%;
+  position: relative;
+  background: #fff;
+  margin-left: 10px;
+  border-radius: 10px;
+}
+body #phone #screen #dual-wrapper .dual-screen.left #cast-wrap {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+body #phone #screen #dual-wrapper .dual-screen.left #cast-wrap .reel.cast .item .shot {
+  width: 35%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+}
+body #phone #screen #dual-wrapper .dual-screen.left #cast-wrap .reel.cast .item .details {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  width: 62.5%;
+  height: 100%;
+  padding-left: 8px;
+}
+body #phone #screen #dual-wrapper .dual-screen.left #cast-wrap .reel.cast .item .details * {
+  width: 100%;
+  margin: auto;
+  text-align: left;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+body #phone #screen #dual-wrapper .dual-screen.left #cast-wrap .reel.cast .item .details h5 {
+  font-size: 9px;
+  font-weight: 600;
+  margin-top: 4px;
+  margin-bottom: 2px;
+}
+body #phone #screen #dual-wrapper .dual-screen.left #cast-wrap .reel.cast .item .details p {
+  margin-top: 2px;
+  font-size: 9px;
+  color: var(--brand-grey);
+}
+body #phone #screen #dual-wrapper .dual-screen.left #trailer-wrap {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+body #phone #screen #dual-wrapper .dual-screen.left #trailer-wrap .reel.trailer {
+  height: 100px;
+}
+body #phone #screen #dual-wrapper .dual-screen.left #trailer-wrap .reel.trailer .item {
+  cursor: pointer;
+}
+body #phone #screen #dual-wrapper .dual-screen.left #trailer-wrap .reel.trailer .item .video-thumb {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: #000;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+}
+body #phone #screen #dual-wrapper .dual-screen.left #trailer-wrap .reel.trailer .item .video-thumb::after {
+  content: '';
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-image: url("https://res.cloudinary.com/dugd5fjqo/image/upload/v1609863950/play-black_fhzx1h.svg");
+  background-size: 50%;
+  background-position: 55% 55%;
+  background-repeat: no-repeat;
+  background-color: var(--toned-white);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.1s linear;
+}
+body #phone #screen #dual-wrapper .dual-screen.left #trailer-wrap .reel.trailer .item .video-thumb.open::after {
+  opacity: 0;
+}
+body #phone #screen #dual-wrapper .dual-screen.right {
+  left: 100%;
+  grid-template-columns: 100%;
+  grid-auto-rows: -webkit-min-content;
+  grid-auto-rows: min-content;
+  grid-gap: 25px;
+}
+body #phone #screen #dual-wrapper .dual-screen.right #date-picker {
+  margin-top: 25px;
+}
+body #phone #screen.two {
+  position: fixed;
+  opacity: 0.3;
+}
+body #phone #screen header {
+  grid-area: 'header';
+  opacity: var(--layer-zero-opacity);
+  transition: opacity 0.2s linear;
+}
+body #phone #screen header * {
+  display: flex;
+}
+body #phone #screen header #top-icons {
+  justify-content: space-between;
+  width: 100%;
+  height: 27.5%;
+  padding: 0 4.5%;
+}
+body #phone #screen header #top-icons .topbar {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  width: 21%;
+  height: 100%;
+}
+body #phone #screen header #top-icons .topbar.left #clock {
+  font-size: 10px;
+}
+body #phone #screen header #top-icons .topbar.right div {
+  width: 12px;
+  height: 12px;
+  position: relative;
+}
+body #phone #screen header #top-icons .topbar.right div svg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  inset: 0;
+}
+body #phone #screen header #top-icons .topbar.right div:nth-of-type(1) svg {
+  transform: scale(2);
+}
+body #phone #screen header #search {
+  width: 100%;
+  height: 72.5%;
+  margin-top: 5px;
+}
+body #phone #screen header #search #searchbar {
+  width: 90%;
+  height: 62.5%;
+  margin: auto;
+  position: relative;
+  background: #fff;
+  border-radius: 5px;
+  transition: box-shadow 0.1s linear;
+}
+body #phone #screen header #search #searchbar:hover {
+  box-shadow: 0 0 0 1px var(--light-brand-c);
+}
+body #phone #screen header #search #searchbar input {
+  width: 85%;
+  height: 100%;
+  position: relative;
+  border: 0;
+  text-indent: 14px;
+  font-size: 12px;
+  line-height: 100%;
+  outline: none;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+body #phone #screen header #search #searchbar input::-moz-placeholder {
+  font-size: 14px;
+  color: var(--brand-grey);
+  opacity: 1;
+}
+body #phone #screen header #search #searchbar input:-ms-input-placeholder {
+  font-size: 14px;
+  color: var(--brand-grey);
+  opacity: 1;
+}
+body #phone #screen header #search #searchbar input::placeholder {
+  font-size: 14px;
+  color: var(--brand-grey);
+  opacity: 1;
+}
+body #phone #screen header #search #searchbar input:hover+#search-icon svg #glass,
+body #phone #screen header #search #searchbar input:focus+#search-icon svg #glass {
+  fill: #3250fa;
+}
+body #phone #screen header #search #searchbar #search-icon {
+  display: flex;
+  width: 15%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+}
+body #phone #screen header #search #searchbar #search-icon svg {
+  width: 95%;
+  height: 95%;
+  margin: auto;
+}
+body #phone #screen header #search #searchbar #search-icon svg #glass {
+  transition: fill 0.1s linear;
+}
+body #phone #screen header #search datalist {
+  position: absolute;
+  visibility: hidden;
+}
+body #phone #screen main {
+  grid-area: 'main';
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  overflow: hidden;
+}
+body #phone #screen main h3 {
+  margin-left: 13px;
+  font-size: 16px;
+  font-weight: 700;
+  opacity: var(--layer-zero-opacity);
+  transition: opacity 0.2s linear;
+}
+body #phone #screen main #card-gallery {
+  width: 100%;
+  height: 82.5%;
+  position: relative;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  overflow: -moz-scrollbars-none;
+}
+body #phone #screen main #card-gallery::-webkit-scrollbar {
+  width: 0 !important;
+  display: none;
+}
+body #phone #screen main #card-gallery #spacer {
+  width: 6%;
+  height: 100%;
+  position: absolute;
+  left: 462.5%;
+  background: none;
+}
+body #phone #screen main #card-gallery .movie-card {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  width: 75%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+}
+body #phone #screen main #card-gallery .movie-card a {
+  width: 95%;
+  height: 80%;
+  position: absolute;
+}
+body #phone #screen main #card-gallery .movie-card .poster {
+  width: 95%;
+  height: 80%;
+  border-radius: 12px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  background-size: cover;
+  background-position: center;
+}
+body #phone #screen main #card-gallery .movie-card .movie-info {
+  width: 100%;
+  height: 17.5%;
+  margin-top: 10px;
+}
+body #phone #screen main #card-gallery .movie-card .movie-info .imdb {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50px;
+  height: 17px;
+  margin-top: 4px;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 11px;
+  color: var(--brand-grey);
+}
+body #phone #screen main #card-gallery .movie-card .movie-info .imdb .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 62.5%;
+  height: 100%;
+  border: 1px solid var(--brand-grey);
+  border-radius: 3px;
+}
+body #phone #screen main #card-gallery .movie-card .movie-info .imdb .grade {
+  font-size: 12px;
+}
+body #phone #screen main #card-gallery .movie-card .movie-info .movie-title {
+  width: 75%;
+  margin-top: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+body #phone #screen main #card-gallery .movie-card .movie-info .tags {
+  margin-top: 7px;
+  font-size: 10px;
+  color: var(--brand-grey);
+}
+body #phone #screen main #card-gallery .movie-card.one {
+  left: 8%;
+}
+body #phone #screen main #card-gallery .movie-card.two {
+  left: 82.5%;
+}
+body #phone #screen main #card-gallery .movie-card.three {
+  left: 157.5%;
+}
+body #phone #screen main #card-gallery .movie-card.four {
+  left: 232.5%;
+}
+body #phone #screen main #card-gallery .movie-card.five {
+  left: 307.5%;
+}
+body #phone #screen main #card-gallery .movie-card.six {
+  left: 382.5%;
+}
+body #phone #screen #fixed-layer {
+  width: 89%;
+  height: 94%;
+  position: fixed;
+  top: 3%;
+  left: 5.5%;
+  opacity: var(--layer-two-opacity);
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+body #phone #screen #fixed-layer .video-thumb::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  inset: 0;
+  background: #000;
+  border-radius: 25px;
+  opacity: 0;
+  transition: opacity 0.1s linear;
+  pointer-events: none;
+}
+body #phone #screen #fixed-layer .video-thumb.active::after {
+  opacity: 1;
+}
+body #phone #screen #fixed-layer .video-thumb video {
+  width: 100%;
+  height: 100%;
+  background: #000;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body #phone #screen #fixed-layer .video-thumb video:focus {
+  outline: 0;
+}
+body #phone #screen #fixed-layer .video-thumb video::-webkit-media-controls-fullscreen-button {
+  display: none;
+}
+body #phone #screen #fixed-layer .back-arrow {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 12px;
+  left: 15px;
+  opacity: 0;
+  z-index: 1;
+}
+body #phone #screen footer {
+  width: 87.5%;
+  background: #fff;
+  height: 10%;
+  position: fixed;
+  top: 87%;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 1;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+body #phone #screen footer nav {
+  width: 100%;
+  height: 100%;
+}
+body #phone #screen footer nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+body #phone #screen footer nav ul li {
+  display: flex;
+  width: 22px;
+  height: 22px;
+  transform: translatey(-40%);
+}
+body #phone #screen footer nav ul li:nth-of-type(1) {
+  width: 30%;
+}
+body #phone #screen footer nav ul li:nth-of-type(1) a {
+  justify-content: space-between;
+}
+body #phone #screen footer nav ul li:nth-of-type(1) a.active h4 {
+  color: var(--brand-c);
+}
+body #phone #screen footer nav ul li:nth-of-type(1) a svg {
+  width: 30%;
+}
+body #phone #screen footer nav ul li:nth-of-type(1) a h4 {
+  width: 67.5%;
+  font-size: 11px;
+  color: #627d8b;
+  transition: color 0.1s linear;
+  pointer-events: none;
+}
+body #phone #screen footer nav ul li a {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+body #phone #screen footer nav ul li a.active svg .icon {
+  fill: var(--brand-c);
+}
+body #phone #screen footer nav ul li a svg {
+  width: 100%;
+  height: 100%;
+}
+body #phone #screen footer nav ul li a svg .icon {
+  transition: fill 0.1s linear;
+}
