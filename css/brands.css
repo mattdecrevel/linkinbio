@@ -240,6 +240,16 @@ button:hover,
     filter: brightness(90%);
 }
 
+/* Peloton */
+.button.button-peloton {
+    color: #ffffff;
+    background-color: #df1c2f;
+}
+.button.button-peloton:hover,
+.button.button-peloton:focus {
+    filter: brightness(90%);
+}
+
 /* Pinterest */
 .button.button-pinterest {
     color: #000000;
